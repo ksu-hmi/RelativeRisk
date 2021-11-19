@@ -71,22 +71,62 @@ while True:
     
 
 #Section 2
-print("\n\nPlease answer these questions with either a 0 or 1.")
-print("0 is No. 1 is Yes... Any other input would not be accepted.")
+#print("\n\nPlease answer these questions with either a 0 or 1.")
+#print("0 is No. 1 is Yes... \nAny other input would not be accepted.")
+print("\n\n1. Have you or your sexual partners had other sexual partners within the past year?")
+print("2. Have you ever had an STD/STI?")
+print("3. Have you or your sexual partner(s) injected drugs or other substances and/or shared needles with another person?")
+print("4. Have you ever had sex with a male partner who has had sex with another male?")
+print("5. Have you ever had sex with a person who is HIV infected?")
+print("6. Have you ever been paid for sex or had sex from a prostitute?")
+print("7. Have you experienced or been exposed to blood-to-blood contact?")
+print("8. Have you or your sexual partners received blood transfusions on or before 1985?")
+print("9. Have you been the victim of nonconsentual sex rape/sexual abuse?")
+print("10. Have you ever been tested for an STD?")
+print("11. Do you or your sexual partner(s) use protection during intercourse?")
+print("12. Do you or your sexual partner(s) get screened/tested?")
 
 #count the number of 0s and 1s and total them.
-input("Have you or your sexual partners had other sexual partners within the past year?")
-input("Have you ever had an STD/STI?")
-input("Have you or your sexual partner(s) injected drugs or other substances and/or shared needles with another person?")
-input("Have you ever had sex with a male partner who has had sex with another male?")
-input("Have you ever had sex with a person who is HIV infected?")
-input("Have you ever been paid for sex or had sex from a prostitute?")
-input("Have you experienced or been exposed to blood-to-blood contact?")
-input("Have you or your sexual partners received blood transfusions on or before 1985?")
-input("Have you been the victim of nonconsentual sex rape/sexual abuse?")
-input("Have you ever been tested for an STD?")
-input("Do you or your sexual partner(s) use protection during intercourse?")
-input("Do you or your sexual partner(s) get screened/tested?")
+total = 0
+response = ""
+
+def count_response(report = "all"):
+    print("\n\nPlease answer these questions with either a 0 or 1. \n0 is No. 1 is Yes... \nAny other input would not be accepted.")
+    print("\nThere should only be 12 responses recorded.\nType 'q' to quit.")
+    total = 0
+    response = ""
+    while True:
+        num = input("Now then, enter your response using a 0 or 1 or 'q' to quit.")
+        if (num.isdigit()):
+            total = total + int(num)
+            if (report.upper() == "ALL"):
+                response = response + num + "\n"
+        elif (num == "Q" or num.startswith("Q") or num.startswith("q")):
+            print("\n")
+            if(report.upper() == "ALL"):
+                print("Now Displaying all responses and total.")
+                print("Responses:")
+                print(response,"\n")
+                print("Total:")
+                print(total)
+                break
+        else:
+            print("your input is invalid, please try again.")
+
+count_response("ALL")
+
+#input("Have you or your sexual partners had other sexual partners within the past year?")
+#input("Have you ever had an STD/STI?")
+#input("Have you or your sexual partner(s) injected drugs or other substances and/or shared needles with another person?")
+#input("Have you ever had sex with a male partner who has had sex with another male?")
+#input("Have you ever had sex with a person who is HIV infected?")
+#input("Have you ever been paid for sex or had sex from a prostitute?")
+#input("Have you experienced or been exposed to blood-to-blood contact?")
+#input("Have you or your sexual partners received blood transfusions on or before 1985?")
+#input("Have you been the victim of nonconsentual sex rape/sexual abuse?")
+#input("Have you ever been tested for an STD?")
+#input("Do you or your sexual partner(s) use protection during intercourse?")
+#input("Do you or your sexual partner(s) get screened/tested?")
 #if input == 1:
     #input("How often do you get tested throughout the year?")
-input("Do you and your sexual partner(s) plan to become pregnant or already pregnant?")
+#input("Do you and your sexual partner(s) plan to become pregnant or already pregnant?")

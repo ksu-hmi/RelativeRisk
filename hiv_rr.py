@@ -18,7 +18,7 @@ while True:
     
 while True:
     age = int(input("\n\nWhat is your Age? "))
-    if age < 18:
+    if age > 0 and age < 18:
         print("your age is ",age,"... Unfortunately, you are a minor.")
         break
     elif age > 17 and age < 25:
@@ -35,6 +35,13 @@ while True:
         break
     else:
         print("Invalid Entry. Please Try Again.")
+
+#age = int(input("\n\nWhat is your age? "))
+#for age in range(100):
+    #if age > 0 and age < 18:
+        #print("your age is ",age,"... Unfortunately, you are a minor.")
+        #break
+    
 
 #race = "white"
 #while (race == "black") or (race == "white") or (race == "hispanic") or (race == "asian") or (race == "other"):
@@ -68,7 +75,7 @@ while True:
         break
     else:
         print("Invalid Selection! Please try again!")
-    
+     
 
 #Section 2
 #print("\n\nPlease answer these questions with either a 0 or 1.")
